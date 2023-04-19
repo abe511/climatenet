@@ -35,6 +35,8 @@
   -webkit-text-size-adjust: 100%;
 }
 
+#map { height: 200px; }
+
 a {
   font-weight: 500;
   color: #646cff;
