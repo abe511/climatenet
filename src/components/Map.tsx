@@ -12,7 +12,7 @@ const attribution =
 
 const Map: React.FC<MapProps> = ({ locations }): ReactElement => {
   return (
-    <MapContainer style={{ height: '400px' }} center={[40, 45]} zoom={7} scrollWheelZoom={false}>
+    <MapContainer className="map" center={[40, 45]} zoom={7} scrollWheelZoom={false}>
       <TileLayer
         attribution={attribution}
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

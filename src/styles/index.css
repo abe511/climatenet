@@ -35,7 +35,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-#map { height: 200px; }
+.map { height: 400px; }
 
 .leaflet-control-attribution {
   display: none;
