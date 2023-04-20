@@ -1,20 +1,15 @@
 import React, { ReactElement } from 'react';
 import Map from 'components/Map';
+import stations from './stations.json';
 
 // interface HomeProps {}
 
 const Home: React.FC<object> = (): ReactElement => {
-  const coords = [
-    { lat: 234, lng: 456 },
-    { lat: 131, lng: 875 },
-    { lat: 789, lng: 656 },
-  ];
-
   return (
     <>
       <h1 className="title">Climate Net</h1>
       <h2 className="subtitle">Weather stations for Tumo boxes</h2>
-      <Map locations={coords} />
+      <Map stations={stations} />
       <h4 className="heading">What is Lorem Ipsum?</h4>
       <p>
         What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
