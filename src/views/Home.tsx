@@ -1,10 +1,13 @@
 import React, { ReactElement } from 'react';
 import Map from 'components/Map';
-import stations from './stations.json';
+import StationInterface from 'shared/StationInterface';
 
-// interface HomeProps {}
+interface HomeProps {
+  stations: StationInterface[];
+}
 
-const Home: React.FC<object> = (): ReactElement => {
+const Home: React.FC<HomeProps> = (props): ReactElement => {
+  const { stations } = props;
   return (
     <>
       <h1 className="title">Climate Net</h1>

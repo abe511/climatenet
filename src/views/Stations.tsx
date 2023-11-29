@@ -1,16 +1,36 @@
 import React, { ReactElement } from 'react';
+import StationInterface from 'shared/StationInterface';
 
-// interface StationsProps {}
+import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
+import stations from './stations.json';
+import Station from './Station';
 
-const Stations: React.FC<object> = (): ReactElement => {
-  const stations = ['Yerevan', 'Gyumri', 'Vanadzor'];
+interface StationsProps {
+  stations: StationInterface[];
+}
+
+const Stations: React.FC<StationsProps> = (): ReactElement => {
   return (
-    <ul>
-      {stations.map((item, idx) => {
-        // eslint-disable-next-line react/no-array-index-key
-        return <li key={idx}>{item}</li>;
-      })}
-    </ul>
+    <>
+      <ul>
+        <NavLink to="secret">secret station</NavLink>
+        {stations.map((item) => {
+          // RETURN A LINK WITH STATION COMPONENT WITH PROPS FROM THIS PROPS
+
+          return (
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={item.id}>
+              <NavLink to={item.id}>{item.location}</NavLink>
+              {/* {item.location} {item.lat} {item.lng} */}
+              {/* <Routes>
+              <Route path={`/stations/${item.location}`} element={<Station station={item} />} />
+            </Routes> */}
+            </li>
+          );
+        })}
+      </ul>
+      <Outlet />
+    </>
   );
 };
 

@@ -4,18 +4,14 @@ import * as L from 'leaflet';
 import 'styles/Map.css';
 import redMarker from 'assets/icons/red-marker.svg';
 import blueMarker from 'assets/icons/blue-marker.svg';
+import StationInterface from 'shared/StationInterface';
 import BoxCard from './BoxCard';
 // import map from 'assets/images/Map.png';
 
 const markerTypes = [redMarker, blueMarker];
 
 export interface MapProps {
-  stations: {
-    location: string;
-    lat: number;
-    lng: number;
-    marker: number;
-  }[];
+  stations: StationInterface[];
 }
 
 const attribution =
