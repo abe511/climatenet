@@ -35,6 +35,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.map { height: 400px; }
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
